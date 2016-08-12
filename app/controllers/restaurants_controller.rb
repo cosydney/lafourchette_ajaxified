@@ -5,11 +5,12 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-  end
-
-  def show
-    @restaurant = Restaurant.find(params[:id])
     @review = Review.new  # <-- You need this now.
   end
 
+
+   def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+  end
 end

@@ -1,3 +1,7 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-4">
+
 <h1><%= @restaurant.name %></h1>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|#{@restaurant.address}" %>
 <h2>
@@ -14,3 +18,9 @@
   <% end %>
 </div>
 <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
+
+    </div>
+  </div>
+</div>
+
+<br>
